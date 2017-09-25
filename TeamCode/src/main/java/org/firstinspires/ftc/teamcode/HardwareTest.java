@@ -1,6 +1,7 @@
 package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.hardware.DcMotor;
+import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 
 /**
@@ -33,7 +34,29 @@ public class HardwareTest {
         fLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         bRight.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
         bLeft.setMode(DcMotor.RunMode.STOP_AND_RESET_ENCODER);
+
+
         //All
-        //fRight.setMode();
+        fRight.setMode(initialMode);
+        bRight.setMode(initialMode);
+        fLeft.setMode(initialMode);
+        bLeft.setMode(initialMode);
+
+        fRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        bRight.setDirection(DcMotorSimple.Direction.FORWARD);
+        fLeft.setDirection(DcMotorSimple.Direction.FORWARD);
+        bLeft.setDirection(DcMotorSimple.Direction.REVERSE);
+
+        stopRobot();
     }
+    public void stopRobot()
+    {
+        fRight.setPower(0);
+        fLeft.setPower(0);
+        bRight.setPower(0);
+        bLeft.setPower(0);
+
+    }
+
+
 }
