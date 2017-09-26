@@ -16,7 +16,7 @@ public class HardwareTest {
 
     private DcMotor.RunMode initialMode = null;
 
-    HardwareMap map = null;
+    HardwareMap mapj = null;
 
     public HardwareTest(DcMotor.RunMode enteredMode)
     {
